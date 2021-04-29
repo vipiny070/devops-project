@@ -11,6 +11,12 @@ def index(request):
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index.html', context)
 
+def about(request):
+    return render(request, 'polls/about.html')
+    
+def contact(request):
+    return render(request, 'polls/contact.html')
+
 # Show specific question and choices
 def detail(request, question_id):
   try:
